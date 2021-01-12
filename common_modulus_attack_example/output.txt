@@ -1,0 +1,44 @@
+Dummy example of RSA Common Modulus Attack
+Generating 2 RSA key pair...
+p = 13, q = 19
+RSA keys generated.
+            First pair:
+            	Public_key: (e, N) = (5, 247)
+            	Private_key: d = 173
+            Second pair:
+            	Public_key: (e, N) = (7, 247)
+            	Private_key: d = 31
+            
+Trying attack on PT: 98
+
+**************************************************
+
+
+Encrypted with private_key1: 167
+Encrypted with private_key2: 97
+
+Starting Common Modulus Attack
+______________________________
+
+The attacker knows:
+    public_key1: (e1, N) = (5, 247) 
+    CT1 = 167
+
+    public_key1: (e2, N) = (7, 247) 
+    CT2 = 97
+    
+The attack can be done only if e1 and e2 are coprime.
+Let's check it.
+e1 and e2 are coprimes!! The attack can be done
+
+Looking for s ad r such that:
+    s * e1 + r * e2 = 1
+    
+s and r found: (s, r) = (3, -2)
+
+What to do now is:
+    (CT1)^r = [(PT)^e1]^r = (PT)^(e1*r)
+    (CT2)^s = [(PT)^e2]^s = (PT)^(e2*s)
+and then multiplay them.
+
+The result is: 98

@@ -1,0 +1,140 @@
+Dummy example of Bleichenbacher's Oracle
+
+**************************************************
+
+Generating p and q primes.
+Let's start compute them betwen 1-st and 100-th
+Primes:
+p = 131
+q = 3
+N = p * q = 393
+
+**************************************************
+
+Need to find a public and private key pair: just computing it...
+
+Phi value 260
+Public key found: 3
+Need to invert it...
+Computing:	phi * a + public_key * b = 1
+Found (a, b): (-1, 87)
+Private_key found: 87
+
+**************************************************
+
+Let's try encryption and decryption.
+I will crypt a random value betwen 2 and 100:	60
+Encrypted with public_key: 243
+Decrypted with private_key: 60
+
+**************************************************
+
+Starting (semplified) Bleichenbacher's Oracle Attack
+The attacker knows:
+	Public_key: 3
+	Modulus N: 393
+	Cipher text: 243
+
+The number of possible values is: 393
+
+Iteration_numer 1:
+Sending to oracle CT' = CT * (2^1)^public_key
+The message CT' is: 372, 
+Querying the oracle to know the first bit of PT'
+First bit of PT' is 0
+Reducing possible values...
+There still are 256 possibile values
+
+
+Iteration_numer 2:
+Sending to oracle CT' = CT * (2^2)^public_key
+The message CT' is: 225, 
+Querying the oracle to know the first bit of PT'
+First bit of PT' is 0
+Reducing possible values...
+There still are 187 possibile values
+
+
+Iteration_numer 3:
+Sending to oracle CT' = CT * (2^3)^public_key
+The message CT' is: 228, 
+Querying the oracle to know the first bit of PT'
+First bit of PT' is 0
+Reducing possible values...
+There still are 152 possibile values
+
+
+Iteration_numer 4:
+Sending to oracle CT' = CT * (2^4)^public_key
+The message CT' is: 252, 
+Querying the oracle to know the first bit of PT'
+First bit of PT' is 0
+Reducing possible values...
+There still are 117 possibile values
+
+
+Iteration_numer 5:
+Sending to oracle CT' = CT * (2^5)^public_key
+The message CT' is: 51, 
+Querying the oracle to know the first bit of PT'
+First bit of PT' is 1
+Reducing possible values...
+There still are 26 possibile values
+
+
+Iteration_numer 6:
+Sending to oracle CT' = CT * (2^6)^public_key
+The message CT' is: 15, 
+Querying the oracle to know the first bit of PT'
+First bit of PT' is 1
+Reducing possible values...
+There still are 13 possibile values
+
+
+Iteration_numer 7:
+Sending to oracle CT' = CT * (2^7)^public_key
+The message CT' is: 120, 
+Querying the oracle to know the first bit of PT'
+First bit of PT' is 0
+Reducing possible values...
+There still are 6 possibile values
+
+
+Iteration_numer 8:
+Sending to oracle CT' = CT * (2^8)^public_key
+The message CT' is: 174, 
+Querying the oracle to know the first bit of PT'
+First bit of PT' is 0
+Reducing possible values...
+There still are 3 possibile values
+
+
+Iteration_numer 9:
+Sending to oracle CT' = CT * (2^9)^public_key
+The message CT' is: 213, 
+Querying the oracle to know the first bit of PT'
+First bit of PT' is 0
+Reducing possible values...
+There still are 3 possibile values
+
+
+Iteration_numer 10:
+Sending to oracle CT' = CT * (2^10)^public_key
+The message CT' is: 132, 
+Querying the oracle to know the first bit of PT'
+First bit of PT' is 0
+Reducing possible values...
+There still are 2 possibile values
+
+
+Iteration_numer 11:
+Sending to oracle CT' = CT * (2^11)^public_key
+The message CT' is: 270, 
+Querying the oracle to know the first bit of PT'
+First bit of PT' is 1
+Reducing possible values...
+There still are 1 possibile values
+
+
+The attack gives the output: 60
+
