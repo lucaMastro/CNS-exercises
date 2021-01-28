@@ -30,7 +30,6 @@ def reconstruction(shares, modulus):
 
     l_coeff = m.lagrange_coefficient(xi_list, modulus)
     
-    print(l_coeff)
     evaluation = 0
     for i in range(l):
         evaluation += (l_coeff[i] * shares[i][1]) % modulus

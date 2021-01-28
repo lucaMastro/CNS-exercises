@@ -176,3 +176,15 @@ def evaluate(polynom, x):
     return evaluation
 
 
+def find_nth_strong_prime(n):
+    # p = 2q + 1
+    count = 0
+    q = p = 1
+    while True:
+        p = 2 * q + 1
+        if is_prime(q) and is_prime(p):
+            count += 1
+        if count == n:
+            break
+        q += 1
+    return p
