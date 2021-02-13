@@ -10,4 +10,4 @@ Examples of theoretical concepts
   * Client-side:
     (2, 3) El-Gamal encryption with threshold signature and DKG to generate secret
   * Server-side:
-    (2, 3) El-Gamal threshold encryption with validation check
+    (2, 3) El-Gamal threshold encryption with validation check and DKG to generate secret
