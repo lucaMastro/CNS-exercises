@@ -11,3 +11,7 @@ Examples of theoretical concepts
     (2, 3) El-Gamal encryption with threshold signature and DKG to generate secret and hybrid enc
   * Server-side:
     (2, 3) El-Gamal threshold encryption with validation check and DKG to generate secret and hybrid enc
+- LSSS for boolean predicates with euristic alghoritm
+- Elliptic Curve bases
+- DSA
+- ECDSA
