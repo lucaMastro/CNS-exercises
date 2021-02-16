@@ -4,7 +4,6 @@ Examples of theoretical concepts
 
 ## To-do list:
 - Chosen ciphertext attack on RSA
-- Solving path problem
 - Moving interaction on sockets
 - Implementing a scheme in which:
   * Client-side:

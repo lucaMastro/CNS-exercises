@@ -2,8 +2,6 @@
 
 import time
 import random
-#import sys
-#sys.path.append("/home/luca/Scrivania/CNS/esercizi")
 
 import math_package.math_module as mm
 import RSA_manager.rsa_manager as rsa_m

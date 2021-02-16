@@ -1,7 +1,6 @@
 from math import ceil, log 
 from time import sleep
 
-#import RSA_manager.encryption as rsa_m 
 import bleichenbacher_oracle.emulation_server_response as esr
 import bleichenbacher_oracle.binary_form_manager as bfm
 

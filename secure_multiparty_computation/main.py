@@ -3,7 +3,7 @@
 import random as r
 import time as t
 import sys
-sys.path.append('/home/luca/Scrivania/CNS/esercizi')
+#sys.path.append('/home/luca/Scrivania/CNS/esercizi')
 
 import math_package.math_module as mm
 import input_peer as ip
@@ -30,7 +30,7 @@ def print_divider():
     print("\n", end = "*" * 30 +"\n")
 
 if __name__ == "__main__":
-    if sys.argv[1] != "":
+    if len(sys.argv) > 1:
         mm.MAX_INT_VALUE = int(sys.argv[1])
     print(welcome_msg) 
     try:

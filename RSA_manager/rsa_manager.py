@@ -1,6 +1,6 @@
 #importing 'esercizi' folder
-import sys
-sys.path.append("/home/luca/Scrivania/CNS/esercizi")
+#import sys
+#sys.path.append("/home/luca/Scrivania/CNS/esercizi")
 import math_package.math_module as mm
 
 def find_phi_coprime(phi, still_used_keys = None):

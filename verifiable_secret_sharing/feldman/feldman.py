@@ -1,12 +1,8 @@
 import random as r
 import time 
-import sys
-sys.path.append("/home/luca/Scrivania/CNS/esercizi")
 
 import secret_sharing.shamir_scheme.shamir_secret_sharing_scheme as ss
 import math_package.math_module as m
-
-
 
 def find_random_strong_prime():
     r.seed(time.time)
@@ -89,6 +85,9 @@ def compute_value_to_disclose(g, yi, p):
     
 
 if __name__ == '__main__':
+    import sys
+    sys.path.append("/home/luca/Scrivania/CNS/esercizi")
+    
     #finding nth strong_prime
     r.seed(time.time)
     n = r.randint(1, 500)

@@ -1,5 +1,5 @@
-import sys
-sys.path.append("/home/luca/Scrivania/CNS/esercizi")
+#import sys
+#sys.path.append("/home/luca/Scrivania/CNS/esercizi")
 
 import secret_sharing.trivial_secret_sharing.trivial_secret_sharing_scheme as tss
 

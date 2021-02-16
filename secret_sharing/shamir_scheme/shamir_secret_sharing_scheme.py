@@ -1,6 +1,4 @@
 import random as r
-import sys
-sys.path.append("/home/luca/Scrivania/CNS/esercizi/")
 
 import math_package.math_module as m
 
@@ -38,6 +36,9 @@ def reconstruction(shares, modulus):
 
 
 if __name__ == '__main__':
+    import sys
+    sys.path.append("/home/luca/Scrivania/CNS/esercizi/")
+    
     modulus = m.find_nth_prime(r.randint(2, 100))
     print("using %d as modules" %(modulus))
     s = r.randint(2, 10)

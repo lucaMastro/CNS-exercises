@@ -1,6 +1,6 @@
 #!/usr/bin/env python
-import sys
-sys.path.append('/home/luca/Scrivania/CNS/esercizi')
+#import sys
+#sys.path.append('/home/luca/Scrivania/CNS/esercizi')
 
 import math_package.math_module as mm
 
