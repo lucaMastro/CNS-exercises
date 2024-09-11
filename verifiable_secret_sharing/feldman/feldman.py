@@ -85,18 +85,13 @@ def compute_value_to_disclose(g, yi, p):
 
     
 
-if __name__ == '__main__':
-    import sys
-    sys.path.append(ROOT_PATH)
-    
+def main(t, n):
     #finding nth strong_prime
     r.seed(time.time)
     n = r.randint(1, 500)
     p = m.find_nth_strong_prime(n)
     q = (p - 1)/2
 
-    t = 3
-    n = 5
     polynom = generate_random_polynom(t, q)
     shares = generate_shares(polynom, n, q)
     s = reconstruction(shares, q)
@@ -114,6 +109,15 @@ if __name__ == '__main__':
         xi = i[0]
         disclose = compute_value_to_disclose(gen, yi, p)
         check_commitments(gen, commitments, disclose, p, xi)
+
+if __name__ == '__main__':
+    import sys
+    sys.path.append(ROOT_PATH)
+
+    t = 3
+    n = 5
+    print(f'using t = {t} and n = {n}')
+    main(t, n)
 
 
 

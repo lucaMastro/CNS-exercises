@@ -21,7 +21,7 @@ def print_divider():
     print("\n") 
 
 if __name__ == "__main__":
-    print("Dummy example of Bleichenbacher's Oracle") 
+    print("Proof of Concept for Bleichenbacher's Oracle") 
     print_divider() 
     random.seed(time.time()) 
     print("Generating p and q primes.\nLet's start compute them betwen 1-st and %d-th" %(MAX_PRIME_SIZE)) 

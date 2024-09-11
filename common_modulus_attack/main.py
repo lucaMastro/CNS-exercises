@@ -14,7 +14,7 @@ def print_divider():
     print("\n") 
 
 if __name__ == "__main__":
-    print("Dummy example of RSA Common Modulus Attack") 
+    print("Proof of Concept for RSA Common Modulus Attack") 
     random.seed(time.time()) 
     print("Generating 2 RSA key pair...") 
 

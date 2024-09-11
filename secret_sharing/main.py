@@ -7,7 +7,7 @@
 import math_package.math_module as mm
 import secret_sharing.shamir_scheme.shamir_secret_sharing_scheme as shamir
 import secret_sharing.trivial_secret_sharing.trivial_secret_sharing_scheme as trivial
-
+from time import sleep
 
 
 def print_divider():
@@ -16,7 +16,7 @@ def print_divider():
 
 
 if __name__ == "__main__":
-    print("Welcome in a dummy exemple of Shamir Secret Sharing Scheme.")
+    print("Welcome in simple Proof of Concept for Shamir Secret Sharing Scheme.")
     print("First of all, give me the scheme (t,n). Please insert two values:")
     try:
         t = int(input("Give me t: "))
@@ -25,10 +25,10 @@ if __name__ == "__main__":
         print("You didnt insert an integer.")
         exit(-1)
     
-    trivial = False
     if t == n:
         print("I categorically refuse to use shamir scheme for (n,n) scheme. I will run trivial scheme.")
-        trivial = True
+        sleep(1)
+        print("...But not yet implemented :facepalm:")
     else:
         print("I'will realize a scheme (%d, %d)" %(t, n))
         shamir.main(t, n)
