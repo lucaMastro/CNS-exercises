@@ -1,8 +1,13 @@
 #!/usr/bin/env python
-#import sys
-#sys.path.append('/home/luca/Scrivania/CNS/esercizi')
+
+# from config.path_config import ROOT_PATH
+# import sys
+# sys.path.append(ROOT_PATH)
 
 import math_package.math_module as mm
+import secret_sharing.shamir_scheme.shamir_secret_sharing_scheme as shamir
+import secret_sharing.trivial_secret_sharing.trivial_secret_sharing_scheme as trivial
+
 
 
 def print_divider():
@@ -26,6 +31,7 @@ if __name__ == "__main__":
         trivial = True
     else:
         print("I'will realize a scheme (%d, %d)" %(t, n))
+        shamir.main(t, n)
 
 
 

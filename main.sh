@@ -1,8 +1,11 @@
 #!/bin/bash
 
 export PYTHONPATH="`pwd`"
+ROOT="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+echo "$ROOT_PATH = '$ROOT'" > config/path_config
 
-operations_list="1. Bleichenbacher oracle example\n
+operations_list="\n
+1. Bleichenbacher oracle example\n
 2. Common modulus attack on RSA\n
 3. Set-up a Shamir or Trivial Secret Sharing scheme\n
 4. Example of Secure Multiparty Computation\n

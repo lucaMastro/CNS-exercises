@@ -1,6 +1,7 @@
 import random as r
 
 import math_package.math_module as m
+from config.path_config import ROOT_PATH
 
 def generate_random_polynom(t, modulus):
     return m.make_random_polynom(t - 1, modulus)
@@ -35,17 +36,13 @@ def reconstruction(shares, modulus):
     return evaluation % modulus
 
 
-if __name__ == '__main__':
-    import sys
-    sys.path.append("/home/luca/Scrivania/CNS/esercizi/")
-    
+def main(t, n):
     modulus = m.find_nth_prime(r.randint(2, 100))
     print("using %d as modules" %(modulus))
     s = r.randint(2, 10)
     print("using %d as secret" %(s))
 
-    print("implementing (t,n) = (3,4)")
-    t, n = 3, 4
+    print(f"implementing (t,n) = ({t},{n})")
     #generating a random polynom
     polynom = generate_random_polynom(t, modulus)
     polynom[0] = s
@@ -60,7 +57,16 @@ if __name__ == '__main__':
 
     #recostruction:
     s_ = reconstruction(shares, modulus)
-    print(s_)
+    print(f"reconstructed value: {s_}")
+
+
+if __name__ == '__main__':
+    import sys
+    sys.path.append(ROOT_PATH)
+    t, n = 3, 4
+    main(t, n)
+    
+    
 
 
 

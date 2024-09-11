@@ -83,7 +83,7 @@ def lagrange_coefficient(list_, modulus):
     l = len(list_) #i dont know how many xi used
     ret = []
 
-    print(list_)
+    #print(list_)
     for i in range(l):
         xi = list_[i]
         li = 1

@@ -1,16 +1,14 @@
 #!/usr/bin/env python
-#import multiprocessing as mp
 import random as r
 import time as t
 import sys
-#sys.path.append('/home/luca/Scrivania/CNS/esercizi')
 
 import math_package.math_module as mm
 import input_peer as ip
 import privacy_peer as pp
 
-welcome_msg = """Welcome to dummy example of secure_multiparty_computation.
-First of all, tell me how many input peers you want simulate:"""
+welcome_msg = """Welcome to Proof of Concept for secure_multiparty_computation.
+First of all, tell me how many input peers you want to simulate:"""
 
 execution_msg = """
 Each peer will generate a (2, 2) secret sharing scheme and

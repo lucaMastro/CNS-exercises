@@ -3,8 +3,10 @@
 import time
 import random
 import math
+
+from config.path_config import ROOT_PATH
 import sys
-sys.path.append("/home/luca/Scrivania/CNS/esercizi")
+sys.path.append(ROOT_PATH)
 
 import math_package.math_module as mm
 import RSA_manager.rsa_manager as rsa_m
@@ -40,6 +42,8 @@ if __name__ == "__main__":
     ret = rsa_m.generate_keys(p, q)
     public_key = ret[0]
     private_key = ret[1]
+
+    print(f"public_key: {public_key}, private_key: {private_key}")
     print_divider()
 
     print("Let's try encryption and decryption.\nI will crypt a random value betwen 2 and %d:\t" %(MAX_PRIME_SIZE), end = "" ) 
